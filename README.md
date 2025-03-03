@@ -1,5 +1,13 @@
 # Azure AI Benchmarking Guide
 
+## BEFORE CLONING:
+
+The tests need to run in this docker container. Start it with the following command
+
+```
+sudo docker run  --rm -it --ipc=host --network=host --privileged --security-opt seccomp=unconfined --cap-add=CAP_SYS_ADMIN --cap-add=SYS_PTRACE --device=/dev/kfd --device=/dev/dri --device=/dev/mem --gpus all nvcr.io/nvidia/pytorch:25.01-py3
+```
+
 # HOW TO RUN THE BENCHMARKS
 
 All the requirements for the benchmarks can be installed with a simple command: `pip3 install -r requirements.txt`.
