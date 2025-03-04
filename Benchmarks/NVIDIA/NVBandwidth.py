@@ -35,7 +35,7 @@ class NVBandwidth:
         build_path = os.path.join(current, 'nvbandwidth')
         os.chdir(build_path)
         results = subprocess.run(['sed', '-i', '2i\set(CMAKE_CUDA_COMPILER /usr/local/cuda/bin/nvcc)', 'CMakeLists.txt'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        results = subprocess.run(['sudo', './debian_install.sh'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        results = subprocess.run(['./debian_install.sh'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         tools.write_log(tools.check_error(results))       
         os.chdir(current)
 
