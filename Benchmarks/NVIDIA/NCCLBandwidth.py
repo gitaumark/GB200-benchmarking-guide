@@ -91,6 +91,6 @@ class NCCLBandwidth:
             writer.writerow(["Message Size", "Tree", "Ring", "NVLS", "NVLSTree"])
             
             for i in range(len(self.buffer[0])):
-                row = [self.buffer[0][i], self.buffer[1][i], self.buffer[2][i], self.buffer[3][i], self.buffer[4][i]]  
+                row = [self.buffer[0][i], self.buffer[1][i], self.buffer[2][i]]  
                 writer.writerow(row)
     
